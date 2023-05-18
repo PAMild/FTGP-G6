@@ -452,25 +452,16 @@ const Quoter: React.FC<Props> = ({ tokenAddress }) => {
 
   return (
  
-      <div className="flex flex-col gap-5 bg-pink-50 mx-40 rounded-lg shadow-lg py-8 w-full md:w-3/5">
-        <div className="text-xl mx-auto -mt-3"><b>WETH-LINK</b> </div>
-        <div className='border-b-2 border-stone-400 -mt-1'> </div>
-        <div className='ml-4 -mt-2'>
-          <div id='balance'> <b> Weth Balance: </b> 0 </div>
-          <div id='uniPrice'> <b> UniPrice: </b> 0 </div>
-          <div id='sushiPrice'> <b> SushiPrice: </b> 0 </div>
-          <div id='profit'> <b> Profit: </b> 0 </div>
-          <div id="arbitrage"> <b> Arbitrage Type: </b> </div>
-          <div id="after"> <b> Balance After Arbitage: </b> 0 </div>
-        </div>
-        <div className= 'mx-auto w-48'>
-          <TextInput
-            type="text"
-            sizing="md"
-            value={value} onChange={handleInputChange} />
-          <Button className="mt-3 w-48 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" onClick={() => getQuoter()}>Quoter</Button>
-          <Button className="mt-3 w-48 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" onClick={() => arbitage()}>Arbitage</Button>
-        </div>
+      <div className="flex flex-col gap-5 bg-white mx-auto rounded-lg shadow-lg py-8 px-10 w-full md:w-1/2 items-center justify-center">
+        <div className="text-xl mx-auto"><b>Weth-LINK</b></div>
+        {/* <div className='border-b-2 border-gray'> </div> */}
+        <div id='uniPrice'>UniPrice: 0</div>
+        <div id='sushiPrice'>SushiPrice: 0</div>
+        <div id="type">Arbitrage Type: </div>
+        <div className="text-base font-bold break-normal">Please input the number of token you want to check if there is arbitrage</div>
+        <TextInput type="text" sizing="md" className="w-full" value={value} onChange={handleInputChange} />
+        <Button className="w-32" gradientMonochrome="info" onClick={() => getQuoter()}>Quoter</Button>
+        <Button className="w-32" gradientMonochrome="info" onClick={() => arbitage()}>Arbitage</Button>
       </div>
 
 

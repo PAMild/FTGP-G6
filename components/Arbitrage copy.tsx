@@ -730,32 +730,24 @@ const Arbitrage: React.FC<Props> = () => {
       alert("Please Connect Metamask")
     }
   }
-
-
-
   return (
-    <div className="flex flex-col gap-5 mt-1">
-      <span className="text-gradient ss:text-[82px] text-[102px] ml-32"> <b> Arbitrage </b> </span>
-      {/* <div className="text-base font-normal break-all mt-1 ml-20">
-        <b className="text-base font-bold text-white">Contract Address: </b>
-        <span className="font-normal text-white className= ss: text-[15px]"> 0x210B92EdD761891ac8039d6431dD6D8263124E47 </span>
+    <div className="flex flex-col gap-5">
+      <h1 className=" text-2xl font-bold ">Arbitrage</h1>
+      {/* <div className="text-base font-normal break-all">
+        <b className="text-base font-bold">Contract Address: </b>
+        0x0B99ff1A7ec96cC46E6c26F0F2828a647447050E
       </div> */}
-      {/* <div className='mr-20 mt-1'>
-        <Quoter />
-      </div> */}
-      <div className='mt-2'>
-        <Quoter tokenAddress="0x326C977E6efc84E512bB9C30f76E30c160eD06FB"/>
-      </div>
-   
-      <div className="flex flex-col gap-5 bg-pink-50 mx-40 rounded-lg shadow-lg py-8 w-full md:w-3/5 px-10 items-center justify-center">
-      <div className="text-base font-normal break-all -mt-2">
+      <div className="flex flex-col gap-5 bg-white mx-auto rounded-lg shadow-lg py-8 px-10 md:w-1/2 items-center justify-center">
+      <div className="text-base font-normal break-all">
         <b className="text-base font-bold">Weth Balance: </b> {isConnected ? wethValue:0.0}
       </div>
-      <div className="text-base font-normal break-normal -mt-2"><b>Please Deposit Weth token</b></div>
-      <TextInput type="text" sizing="md" className="w-40 -mt-2" value={depositValue} onChange={handleInputChange} />
-      <Button className="-mt-2 w-48 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" onClick={() => depositWeth()}>Deposit</Button>
-      <Button className="-mt-2 w-48 bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800" onClick={() => withdrawWeth()}>Withdraw</Button>
+      <div className="text-base font-normal break-normal"><b>Please Deposit Weth token</b></div>
+      <TextInput type="text" sizing="md" className="w-40" value={depositValue} onChange={handleInputChange} />
+      <Button className="w-32" gradientMonochrome="info" onClick={() => depositWeth()}>Deposit</Button>
+      <Button className="w-32" gradientMonochrome="info" onClick={() => withdrawWeth()}>Withdraw</Button>
       </div>
+      
+      <Quoter tokenAddress="0x326C977E6efc84E512bB9C30f76E30c160eD06FB"/>
     </div>
 
 

@@ -2,9 +2,7 @@ import React from 'react';
 import {AiOutlineHome} from 'react-icons/ai';
 import {GiReceiveMoney} from 'react-icons/gi';
 import {TbPigMoney} from 'react-icons/Tb';
-import FlashLoan from '../components/FlashLoan';
 import { useState } from 'react';
-import { global } from "styled-jsx/css";
 
 const Nav = () =>{
     const [activeNav,setActiveNav] = useState('#')
